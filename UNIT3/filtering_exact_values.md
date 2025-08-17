@@ -48,13 +48,17 @@ WHERE release_year > 1960;
 
 ## 🧮 Filtering with Multiple Criteria
 
-You can combine conditions in the `WHERE` clause using operators like `OR`, `AND`, and `BETWEEN`:
+
+You can combine conditions in the `WHERE` clause using operators like `OR`, `AND`, `BETWEEN`, and `IN`:
+
 
 **Operators:**
 
 - `OR`
 - `AND`
 - `BETWEEN`
+- `IN`
+
 
 
 **Examples:**
@@ -75,6 +79,28 @@ WHERE color = 'yellow' AND length = 'short';
 SELECT *
 FROM coats
 WHERE buttons BETWEEN 1 AND 5;
+```
+
+---
+
+## 🔢 Filtering with the `IN` Operator
+
+The `IN` operator lets you match a column against a list of values. It's useful for filtering rows where a column matches any value in a specified set.
+
+**Example 1:**
+
+```sql
+SELECT title, release_year
+FROM films
+WHERE release_year IN (1920, 1930, 1940);
+```
+
+**Example 2:**
+
+```sql
+SELECT title
+FROM films
+WHERE country IN ('Germany', 'France');
 ```
 
 ---
@@ -132,4 +158,3 @@ LIMIT 5;
 2. `WHERE`
 3. `SELECT`
 4. `LIMIT`
-

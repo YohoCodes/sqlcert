@@ -38,3 +38,17 @@ WHERE release_year >= 1994
     AND release_year <= 2000
 LIMIT 5;
 
+-- Multiple AND operators
+SELECT title
+FROM films
+WHERE release_year
+BETWEEN 1994 AND 2000 AND country = 'UK';
+
+-- Using IN
+SELECT title, release_year
+FROM films
+WHERE release_year IN (1920, 1930, 1940);
+
+SELECT title
+FROM films
+WHERE country IN ('Germany', 'France');
