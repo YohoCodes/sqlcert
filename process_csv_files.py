@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 """
 Script to process all CSV files and replace empty quoted strings ("") with blank cells
+
+If a csv is not properly uploading to PostgreSQL, the user should run this script and
+use the processed CSV rather than the raw one
 """
 
 import csv
