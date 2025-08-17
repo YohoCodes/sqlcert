@@ -44,8 +44,74 @@ WHERE release_year > 1960;
 | `IS NULL`    | Is NULL             |
 | `IS NOT NULL`| Is NOT NULL         |
 
+
+
+## 🧮 Filtering with Multiple Criteria
+
+You can combine conditions in the `WHERE` clause using operators like `OR`, `AND`, and `BETWEEN`:
+
+**Operators:**
+
+- `OR`
+- `AND`
+- `BETWEEN`
+
+
+**Examples:**
+
+```sql
+SELECT *
+FROM coats
+WHERE color = 'yellow' OR length = 'short';
+```
+
+```sql
+SELECT *
+FROM coats
+WHERE color = 'yellow' AND length = 'short';
+```
+
+```sql
+SELECT *
+FROM coats
+WHERE buttons BETWEEN 1 AND 5;
+```
+
 ---
 
+
+## 🔲 Inclusive vs Non-Inclusive Boundaries
+
+> **Info:** The `BETWEEN` operator is inclusive, while using `>` and `<` is non-inclusive.
+
+### 🚫 Non-Inclusive Boundary Condition
+
+```sql
+SELECT title, release_year
+FROM films
+WHERE release_year > 1994
+	AND release_year < 2000
+LIMIT 5;
+```
+
+### ✅ Inclusive Boundary Condition (BETWEEN)
+
+```sql
+SELECT title, release_year
+FROM films
+WHERE release_year BETWEEN 1994 AND 2000
+LIMIT 5;
+```
+
+### ✅ Inclusive Boundary Condition (>= and <=)
+
+```sql
+SELECT title, release_year
+FROM films
+WHERE release_year >= 1994
+	AND release_year <= 2000
+LIMIT 5;
+```
 
 ---
 
@@ -66,3 +132,4 @@ WHERE release_year > 1960;
 2. `WHERE`
 3. `SELECT`
 4. `LIMIT`
+
