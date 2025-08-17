@@ -1,13 +1,13 @@
 CREATE TABLE films (
     id BIGSERIAL PRIMARY KEY,
     title TEXT,
-    release_year TEXT,
+    release_year FLOAT,
     country TEXT,
-    duration TEXT,
+    duration FLOAT,
     language TEXT,
     certification TEXT,
-    gross TEXT,
-    budget TEXT
+    gross FLOAT,
+    budget FLOAT
 );
 
 CREATE TABLE people (
