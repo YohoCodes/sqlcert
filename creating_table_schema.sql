@@ -18,12 +18,12 @@ CREATE TABLE people (
 );
 
 CREATE TABLE reviews (
-    film_id TEXT,
-    num_user TEXT,
-    num_critic TEXT,
-    imdb_score TEXT,
-    num_votes TEXT,
-    facebook_likes TEXT
+    film_id INT,
+    num_user FLOAT,
+    num_critic FLOAT,
+    imdb_score FLOAT,
+    num_votes INT,
+    facebook_likes INT
 );
 
 CREATE TABLE roles (
