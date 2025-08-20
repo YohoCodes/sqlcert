@@ -12,6 +12,3 @@ WHERE release_year = 2010;
 SELECT ROUND(AVG(budget)) AS avg_budget
 FROM films
 WHERE release_year = 2010;
-
-SELECT AVG(budget) AS avg_budget
-FROM films;
