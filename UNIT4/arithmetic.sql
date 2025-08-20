@@ -15,3 +15,5 @@ SELECT (4.0 / 3.0);
 SELECT title AS film_name, (gross - budget) AS profit
 FROM films
 WHERE (gross - budget) IS NOT NULL;
+
+SELECT (4 / 3.0) AS division_result;

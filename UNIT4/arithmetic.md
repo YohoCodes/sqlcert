@@ -1,4 +1,5 @@
 
+
 # Arithmetic & Aggregate Functions in SQL
 
 ---
@@ -59,3 +60,34 @@ Result:
 |--------------|--------------|
 | 12215500000  | 334          |
 
+---
+
+## 4. Automatic Rounding in Integer Division
+
+When dividing two integers in SQL, the result is automatically rounded down (integer division). This means any fractional part is discarded.
+
+**Example:**
+
+```sql
+SELECT 5 / 2 AS result;
+```
+
+Result:
+
+| result |
+|--------|
+|   2    |
+
+To get a decimal result, cast one operand to a decimal type:
+
+```sql
+SELECT 5 / 2.0 AS result;
+```
+
+Result:
+
+| result |
+|--------|
+|  2.5   |
+
+> **Tip:** Always cast at least one operand to a decimal or float to avoid automatic rounding in division.
